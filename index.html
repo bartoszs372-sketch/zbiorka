@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090b10">
+  <meta name="description" content="Dwie niezależne zbiórki: BeamNG.drive za 99 zł oraz 12 500 V-Dolców za 365,99 zł. Wybierz cel i przejdź do serwisu zbiórkowego.">
+  <title>Misja: BeamNG + V-Dolce</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏁</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="top"></div>
+  <div class="topbar">
+    <nav class="nav wrap" aria-label="Nawigacja główna">
+      <a class="brand" href="#top" aria-label="Strona główna">
+        <span class="brand-mark" aria-hidden="true">🏁</span>
+        <span>MISJA<span style="color:var(--orange)">.GG</span></span>
+      </a>
+      <div class="nav-links">
+        <a href="#cele">Cele</a>
+        <a href="#jak-dziala">Jak działa?</a>
+        <a href="#faq">FAQ</a>
+        <a class="nav-cta" href="#wplata">Wesprzyj projekt ↗</a>
+      </div>
+    </nav>
+  </div>
+
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow"><span class="live-dot"></span> Dwie niezależne zbiórki</div>
+        <h1 class="display"><span>Wbijamy</span><span class="accent">na wyższy</span><span>bieg.</span></h1>
+        <p class="hero-copy">Mam dwa cele: kupić <strong>BeamNG.drive</strong> i zdobyć <strong>12 500 V-Dolców</strong>. Wybierz jedną ze zbiórek i wesprzyj ją przez bezpieczny, zewnętrzny serwis.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#cele">Wybieram cel <span aria-hidden="true">↓</span></a>
+          <button class="button button-quiet" id="share-page" type="button">Udostępnij stronę ↗</button>
+        </div>
+        <p class="hero-note">Wsparcie jest dobrowolne. Każda zbiórka ma osobny link i osobny cel.</p>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="visual-glow"></div>
+        <div class="speed-card">
+          <div class="speed-top"><span>Tryb misji</span><span>● aktywny</span></div>
+          <div class="speed-number">2×</div>
+          <div class="speed-label">Dwa cele. Jedna strona. Ty wybierasz.</div>
+          <div class="speed-line"><span></span></div>
+          <div class="speed-bottom"><span>BEAMNG DRIVE</span><span>V-BUCKS</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="road" aria-hidden="true"><span class="road-car">🏎️</span></div>
+  </header>
+
+  <main>
+    <section id="cele">
+      <div class="wrap">
+        <div class="section-head">
+          <div><p class="section-kicker">Wybierz swoją misję</p><h2 class="display">Dwa cele. Ty decydujesz.</h2></div>
+          <p class="section-desc">Kliknij „Wybieram ten cel”, a następnie przejdź do odpowiedniej zbiórki. Nie ma wspólnego portfela — każda wpłata trafia do wybranego serwisu.</p>
+        </div>
+
+        <div class="goals">
+          <article class="goal-card selected" id="card-game">
+            <div class="goal-top"><div class="goal-icon" aria-hidden="true">🚗</div><span class="goal-tag">Symulator jazdy</span></div>
+            <h3>BeamNG.drive</h3>
+            <p class="goal-price">Cel: 99,00 zł</p>
+            <p class="goal-text">Realistyczna fizyka, rozbijanie samochodów i testowanie różnych pojazdów. Zbiórka na zakup gry.</p>
+            <div class="goal-actions">
+              <button class="button button-primary select-goal" type="button" data-goal="game" aria-pressed="true">Wybieram ten cel</button>
+              <button class="button button-quiet copy-goal" type="button" data-goal="game">Kopiuj link</button>
+            </div>
+          </article>
+
+          <article class="goal-card vbucks" id="card-vd">
+            <div class="goal-top"><div class="goal-icon" aria-hidden="true">🪙</div><span class="goal-tag">Fortnite</span></div>
+            <h3>12 500 V-Dolców</h3>
+            <p class="goal-price">Cel: 365,99 zł</p>
+            <p class="goal-text">Druga, całkowicie oddzielna zbiórka na pakiet 12 500 V-Dolców. Wybierz ją, jeśli chcesz wesprzeć ten cel.</p>
+            <div class="goal-actions">
+              <button class="button button-primary select-goal" type="button" data-goal="vd" aria-pressed="false">Wybieram ten cel</button>
+              <button class="button button-quiet copy-goal" type="button" data-goal="vd">Kopiuj link</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="wplata">
+      <div class="wrap">
+        <div class="donate-panel">
+          <div>
+            <p class="section-kicker">Ostatni krok</p>
+            <h2 class="display">Gotowy do startu?</h2>
+            <p>Wybierz cel i opcjonalnie zaznacz kwotę, którą planujesz wpłacić. Następnie otworzy się strona właściwej zbiórki.</p>
+            <div class="chosen" id="chosen-label"><span aria-hidden="true">✓</span> Wybrano: BeamNG.drive</div>
+          </div>
+          <div class="form-side">
+            <span class="form-label">Kwota orientacyjna</span>
+            <div class="amounts" role="group" aria-label="Wybierz sugerowaną kwotę">
+              <button class="amount" type="button" data-amount="5" aria-pressed="false">5 zł</button>
+              <button class="amount" type="button" data-amount="10" aria-pressed="false">10 zł</button>
+              <button class="amount" type="button" data-amount="20" aria-pressed="false">20 zł</button>
+              <button class="amount" type="button" data-amount="50" aria-pressed="false">50 zł</button>
+              <button class="amount" type="button" data-amount="99" aria-pressed="true">99 zł</button>
+            </div>
+            <div class="custom-amount">
+              <label for="custom-amount">Inna kwota:</label>
+              <input id="custom-amount" type="number" min="1" max="100000" step="0.01" inputmode="decimal" placeholder="np. 15">
+            </div>
+            <button class="button button-primary form-submit" id="donate-button" type="button">Przejdź do zbiórki ↗</button>
+            <p class="fine-print">Ważne: wybrana tutaj kwota jest tylko podpowiedzią i nie zostanie automatycznie przeniesiona do płatności. Właściwą kwotę ustawisz bezpośrednio na stronie Zrzutka.pl lub Pomagam.pl. Ta strona nie przyjmuje ani nie przechowuje płatności.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="jak-dziala">
+      <div class="wrap">
+        <div class="section-head">
+          <div><p class="section-kicker">Bez kombinowania</p><h2 class="display">Jak to działa?</h2></div>
+          <p class="section-desc">Cały proces odbywa się na stronie wybranego serwisu zbiórkowego.</p>
+        </div>
+        <div class="steps">
+          <article class="step"><span class="step-number">01</span><h3>Wybierz cel</h3><p>Zdecyduj, czy chcesz wesprzeć zakup BeamNG.drive, czy zbiórkę na V-Dolce.</p></article>
+          <article class="step"><span class="step-number">02</span><h3>Otwórz zbiórkę</h3><p>Przycisk przeniesie Cię na odpowiednią stronę zrzutki w nowej karcie.</p></article>
+          <article class="step"><span class="step-number">03</span><h3>Wpłać na serwisie</h3><p>Sprawdź cel i dane zbiórki, ustaw kwotę na zewnętrznej stronie i postępuj zgodnie z jej instrukcjami.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="wrap">
+        <div class="section-head"><div><p class="section-kicker">Masz pytanie?</p><h2 class="display">FAQ</h2></div></div>
+        <div class="faq">
+          <details><summary>Czy wpłata odbywa się na tej stronie?</summary><p>Nie. Ta strona jest tylko prezentacją dwóch celów. Płatność i ewentualne potwierdzenie odbywają się wyłącznie w zewnętrznym serwisie zbiórkowym.</p></details>
+          <details><summary>Czy mogę wybrać dowolną kwotę?</summary><p>Tak, o ile pozwala na to wybrany serwis zbiórkowy. Kwoty widoczne tutaj są orientacyjne — konkretną kwotę ustawisz na stronie zbiórki.</p></details>
+          <details><summary>Czy obie zbiórki są połączone?</summary><p>Nie. BeamNG.drive i V-Dolce mają osobne cele oraz osobne strony zbiórek. Przed wpłatą sprawdź, czy otwarty jest właściwy cel.</p></details>
+          <details><summary>Co zrobić, jeśli przycisk nie otwiera zbiórki?</summary><p>Możesz skorzystać z przycisku „Kopiuj link” na wybranej karcie i wkleić adres bezpośrednio do przeglądarki.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-row">
+      <div>© <span id="year"></span> MISJA.GG · Prywatna strona informacyjna.</div>
+      <div class="footer-links"><a href="#cele">Cele</a><a href="#faq">FAQ</a><a href="#top">Na górę ↑</a></div>
+    </div>
+    <div class="wrap" style="margin-top:12px">BeamNG.drive i Fortnite są znakami towarowymi ich właścicieli. Strona nie jest oficjalnie powiązana z twórcami tych gier. Zbiórki są prowadzone na zewnętrznych platformach.</div>
+  </footer>
+
+  <a href="#top" class="back-top" id="back-top" aria-label="Wróć na górę">↑</a>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
